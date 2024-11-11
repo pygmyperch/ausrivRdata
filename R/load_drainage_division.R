@@ -12,18 +12,31 @@ load_drainage_division <- function(division_name,
                                    layers = c("AWRADrainageDivision", "RiverRegion", 
                                               "AHGFNetworkStream", "AHGFWaterbody")) {
   
-  # Create standardized suffix from division name
-  division_suffix <- division_name %>%
-    stringr::str_replace_all("[[:space:]-]", "_") %>%
-    stringr::str_replace_all("[^[:alnum:]_]", "") %>%
-    tolower()
+  # Match input name to standardized directory name
+  matched_name <- NULL
+  
+  # First try exact match
+  if (division_name %in% names(.division_name_map)) {
+    matched_name <- .division_name_map[[division_name]]
+  } else {
+    # Try case-insensitive match
+    idx <- which(tolower(names(.division_name_map)) == tolower(division_name))
+    if (length(idx) == 1) {
+      matched_name <- .division_name_map[[idx]]
+    }
+  }
+  
+  if (is.null(matched_name)) {
+    stop("Invalid division name: '", division_name, "'\n",
+         "Available divisions:\n", paste("-", names(.division_name_map), collapse = "\n"))
+  }
   
   # Get base directory
-  base_dir <- system.file("extdata/spatial", division_suffix, 
+  base_dir <- system.file("extdata/spatial", matched_name, 
                           package = "ausrivRdata")
   
   if (base_dir == "") {
-    stop("Drainage division '", division_name, "' not found in package data")
+    stop("Data directory not found for division: ", division_name)
   }
   
   # Initialize results list
@@ -31,7 +44,7 @@ load_drainage_division <- function(division_name,
   
   # Load requested layers
   for (layer in layers) {
-    filename <- file.path(base_dir, paste0(layer, "_", division_suffix, ".rds"))
+    filename <- file.path(base_dir, paste0(layer, "_", matched_name, ".rds"))
     
     if (file.exists(filename)) {
       tryCatch({
@@ -58,4 +71,3 @@ load_drainage_division <- function(division_name,
   
   return(division_data)
 }
-

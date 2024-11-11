@@ -5,14 +5,6 @@
 #' @importFrom magrittr %>%
 #' @export
 list_drainage_divisions <- function() {
-  base_dir <- system.file("extdata/spatial", package = "ausrivRdata")
-  if (base_dir == "") {
-    stop("Package data directory not found")
-  }
-  
-  # Get directory names and convert back to original format
-  list.dirs(base_dir, full.names = FALSE, recursive = FALSE) %>%
-    stringr::str_replace_all("_", " ") %>%
-    stringr::str_to_title()
+  # Return the official names
+  names(.division_name_map)
 }
-
