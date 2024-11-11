@@ -1,0 +1,26 @@
+Package: ausrivRdata
+Title: Australian Hydrological Geospatial Fabric (Geofabric) Data for ausrivR Package
+Version: 0.1.0
+Authors@R: person("Chris Brauer", email = "pygmyperch@gmail.com", role = c("aut", "cre"))
+Maintainer: Chris Brauer <pygmyperch@gmail.com>
+Description: Provides geospatial data from the Australian Hydrological Geospatial 
+    Fabric (Geofabric) for use with the ausrivR package. This package includes data 
+    from the Geofabric National version 3.3 product suite, comprising Surface 
+    Network, Surface Cartography, Surface Catchments, Hydrology Reporting Catchments, 
+    Hydrology Reporting Regions, and Groundwater Cartography.
+    The data originally sourced from http://www.bom.gov.au/water/geofabric/, provided as ESRI File Geodatabases (.gdb)
+    and licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+    For more information, visit: http://www.bom.gov.au/water/geofabric/documentation.shtml
+    Here the data has been reformatted and is distributed as a GeoPackage (.gpkg) for easier use within R.
+License: CC-BY-4.0
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 3.5.0)
+Imports: 
+    sf
+URL: https://github.com/yourusername/ausrivRdata
+BugReports: https://github.com/pygmyperch/ausrivRdata/issues
+Date: 2023-10-09
+Copyright: Commonwealth of Australia (Bureau of Meteorology) 2022
+RoxygenNote: 7.3.2

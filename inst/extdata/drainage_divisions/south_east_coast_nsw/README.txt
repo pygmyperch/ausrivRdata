@@ -1,0 +1,35 @@
+Drainage Division: South East Coast (Nsw)
+Processed: 2024-11-11
+
+Feature Counts:
+--------------
+AWRADrainageDivision: 1
+RiverRegion: 20
+AHGFNetworkStream: 92279
+AHGFWaterbody: 903
+
+Geometry Validation:
+------------------
+All geometries checked and validated during processing.
+
+River Regions:
+- BEGA RIVER
+- BELLINGER RIVER
+- BRUNSWICK RIVER
+- CLARENCE RIVER
+- CLYDE RIVER-JERVIS BAY
+- HASTINGS RIVER
+- HAWKESBURY RIVER
+- HUNTER RIVER
+- KARUAH RIVER
+- MACLEAY RIVER
+- MACQUARIE-TUGGERAH LAKES
+- MANNING RIVER
+- MORUYA RIVER
+- RICHMOND RIVER
+- SHOALHAVEN RIVER
+- SYDNEY COAST-GEORGES RIVER
+- TOWAMBA RIVER
+- TUROSS RIVER
+- TWEED RIVER
+- WOLLONGONG COAST

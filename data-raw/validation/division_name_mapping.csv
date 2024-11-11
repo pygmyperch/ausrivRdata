@@ -1,0 +1,14 @@
+"awra_original","awra_standardized","river_original","river_standardized","matched"
+"Carpentaria Coast","Carpentaria Coast","Pilbara-Gascoyne","Pilbara-Gascoyne",TRUE
+"Lake Eyre Basin","Lake Eyre Basin","North Western Plateau","North Western Plateau",TRUE
+"Murray-Darling Basin","Murray-Darling Basin","Tasmania","Tasmania",TRUE
+"North East Coast","North East Coast","Murray-Darling Basin","Murray-Darling Basin",TRUE
+"North Western Plateau","North Western Plateau","South East Coast (Victoria)","South East Coast (Victoria)",TRUE
+"Pilbara-Gascoyne","Pilbara-Gascoyne","Carpentaria Coast","Carpentaria Coast",TRUE
+"South Australian Gulf","South Australian Gulf","Lake Eyre Basin","Lake Eyre Basin",TRUE
+"South East Coast (NSW)","South East Coast (Nsw)","South Australian Gulf","South Australian Gulf",TRUE
+"South East Coast (VICTORIA)","South East Coast (Victoria)","North East Coast","North East Coast",TRUE
+"South West Coast","South West Coast","South West Coast","South West Coast",TRUE
+"South Western Plateau","South Western Plateau","South Western Plateau","South Western Plateau",TRUE
+"Tanami -Timor Sea Coast","Tanami-Timor Sea Coast","Tanami-Timor Sea Coast","Tanami-Timor Sea Coast",TRUE
+"Tasmania","Tasmania","South East Coast (NSW)","South East Coast (Nsw)",TRUE

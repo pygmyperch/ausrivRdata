@@ -1,0 +1,39 @@
+Drainage Division: Carpentaria Coast
+Processed: 2024-11-11
+
+Feature Counts:
+--------------
+AWRADrainageDivision: 1
+RiverRegion: 24
+AHGFNetworkStream: 677191
+AHGFWaterbody: 40654
+
+Geometry Validation:
+------------------
+All geometries checked and validated during processing.
+
+River Regions:
+- ARCHER-WATSON RIVERS
+- CALVERT RIVER
+- DUCIE RIVER
+- EMBLEY RIVER
+- FLINDERS-NORMAN RIVERS
+- GROOTE EYLANDT
+- HOLROYD RIVER
+- JARDINE RIVER
+- KOOLATONG RIVER
+- LIMMEN BIGHT RIVER
+- McARTHUR RIVER
+- MITCHELL-COLEMAN RIVERS (QLD)
+- MORNING INLET
+- MORNINGTON ISLAND
+- NICHOLSON-LEICHHARDT RIVERS
+- ROBINSON RIVER
+- ROPER RIVER
+- ROSIE RIVER
+- SETTLEMENT CREEK
+- TORRES STRAIT ISLANDS
+- TOWNS RIVER
+- WALKER RIVER
+- WARD RIVER
+- WENLOCK RIVER
