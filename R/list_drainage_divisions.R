@@ -5,7 +5,7 @@
 #' @importFrom magrittr %>%
 #' @export
 list_drainage_divisions <- function() {
-  base_dir <- system.file("extdata/drainage_divisions", package = "ausrivRdata")
+  base_dir <- system.file("extdata/spatial", package = "ausrivRdata")
   if (base_dir == "") {
     stop("Package data directory not found")
   }

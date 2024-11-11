@@ -19,7 +19,7 @@ load_drainage_division <- function(division_name,
     tolower()
   
   # Get base directory
-  base_dir <- system.file("extdata/drainage_divisions", division_suffix, 
+  base_dir <- system.file("extdata/spatial", division_suffix, 
                           package = "ausrivRdata")
   
   if (base_dir == "") {
