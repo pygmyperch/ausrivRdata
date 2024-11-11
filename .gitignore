@@ -1,0 +1,16 @@
+# R specific
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.Rproj
+.Rbuildignore
+.DS_Store
+Thumbs.db
+
+# Exclude data-raw directory
+# data-raw/
+
+# Exclude other unnecessary files
+*.log
+*.aux
