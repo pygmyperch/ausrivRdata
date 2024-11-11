@@ -17,8 +17,10 @@ Encoding: UTF-8
 LazyData: true
 Depends: 
     R (>= 3.5.0)
-Imports: 
-    sf
+Imports:
+    sf,
+    magrittr,
+    stringr
 URL: https://github.com/yourusername/ausrivRdata
 BugReports: https://github.com/pygmyperch/ausrivRdata/issues
 Date: 2023-10-09
