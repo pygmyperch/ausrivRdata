@@ -16,3 +16,13 @@
   "Carpentaria Coast" = "carpentaria",
   "Pilbara-Gascoyne" = "pilbara_gascoyne"
 )
+
+#' Map Standardized Names
+#' 
+#' @keywords internal
+.standardize_name <- function(name) {
+  name %>%
+    stringr::str_replace_all("[[:space:]-]", "_") %>%
+    stringr::str_replace_all("[^[:alnum:]_]", "") %>%
+    tolower()
+}

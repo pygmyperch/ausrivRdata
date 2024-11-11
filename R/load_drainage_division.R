@@ -12,39 +12,42 @@ load_drainage_division <- function(division_name,
                                    layers = c("AWRADrainageDivision", "RiverRegion", 
                                               "AHGFNetworkStream", "AHGFWaterbody")) {
   
-  # Match input name to standardized directory name
-  matched_name <- NULL
+  # Match input name to shortened directory name
+  matched_dir <- NULL
   
   # First try exact match
   if (division_name %in% names(.division_name_map)) {
-    matched_name <- .division_name_map[[division_name]]
+    matched_dir <- .division_name_map[[division_name]]
   } else {
     # Try case-insensitive match
     idx <- which(tolower(names(.division_name_map)) == tolower(division_name))
     if (length(idx) == 1) {
-      matched_name <- .division_name_map[[idx]]
+      matched_dir <- .division_name_map[[idx]]
     }
   }
   
-  if (is.null(matched_name)) {
+  if (is.null(matched_dir)) {
     stop("Invalid division name: '", division_name, "'\n",
          "Available divisions:\n", paste("-", names(.division_name_map), collapse = "\n"))
   }
   
   # Get base directory
-  base_dir <- system.file("extdata/spatial", matched_name, 
+  base_dir <- system.file("extdata/spatial", matched_dir, 
                           package = "ausrivRdata")
   
   if (base_dir == "") {
     stop("Data directory not found for division: ", division_name)
   }
   
+  # Get standardized name for filenames
+  std_name <- .standardize_name(division_name)
+  
   # Initialize results list
   division_data <- list()
   
   # Load requested layers
   for (layer in layers) {
-    filename <- file.path(base_dir, paste0(layer, "_", matched_name, ".rds"))
+    filename <- file.path(base_dir, paste0(layer, "_", std_name, ".rds"))
     
     if (file.exists(filename)) {
       tryCatch({
